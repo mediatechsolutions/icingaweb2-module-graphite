@@ -18,7 +18,7 @@ class Graphite_IndexController extends ActionController
         $this->view->iframe_h = $this->getParam('graphite_iframe_h');
 
         if ($this->grapher->getRemoteFetch()) {
-            $this->view->url = $this->_request->getScheme()."://".
+            $this->view->url = "https://".
                                $this->_request->getHttpHost().
                                Url::fromPath('graphite/index/graph', array(
                                    'target' => $this->getParam('graphite_url')
